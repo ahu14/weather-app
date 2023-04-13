@@ -50,7 +50,7 @@ let Home = () => {
             let longitude = pos.coords.longitude;
             let latitude = pos.coords.latitude;
 
-            fetch(`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_API_KEY}&q=${latitude}%2C${longitude}`)
+            fetch(`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_API_KEY}&q=${latitude}%2C${longitude}`)
             .then(res => res.json())
             .then(d => {
                 if (title != "" || data.length != 0 || date != ""){
@@ -64,7 +64,7 @@ let Home = () => {
                     ${d.AdministrativeArea.LocalizedName}, ${d.Country.LocalizedName}`
                 );
 
-                fetch(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${d.Key}?apikey=${process.env.REACT_APP_API_KEY}&metric=true`)
+                fetch(`https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${d.Key}?apikey=${process.env.REACT_APP_API_KEY}&metric=true`)
                 .then(res => res.json())
                 .then(d2 => {
                     for (let i = 0; i < d2.length; i++){
