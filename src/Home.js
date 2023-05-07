@@ -35,13 +35,13 @@ let Home = () => {
         return (
             <div className="flex w-full h-screen flex-col">
                 <ul className="w-full h-fit py-2 flex flex-col 
-                bg-red-500 text-xl sm:flex-row justify-around">
+                bg-blue-300 text-xl sm:flex-row justify-around text-center">
                     <li id="current-condition" onClick={clicked}
-                    className="py-0.5 cursor-pointer">Current Conditions</li>
+                    className="py-1.5 cursor-pointer sm:py-0.5">Current Condition</li>
                     <li id="forecast-hourly" onClick={clicked}
-                    className="py-0.5 cursor-pointer">Forecast Hourly</li>
+                    className="py-1.5 cursor-pointer sm:py-0.5">Forecast Hourly</li>
                     <li id="forecast-daily" onClick={clicked}
-                    className="py-0.5 cursor-pointer">Forecast Daily</li>
+                    className="py-1.5 cursor-pointer sm:py-0.5">Forecast Daily</li>
                 </ul>
 
                 <div className="flex w-full h-screen justify-center items-center flex-col text-center">
