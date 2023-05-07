@@ -27,7 +27,7 @@ let Weather = ({isOn, state}) => {
             let longitude = pos.coords.longitude;
             let latitude = pos.coords.latitude;
             
-            takeData(`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_API_KEY}&q=${latitude}%2C${longitude}`, (d) => {
+            takeData(`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${process.env.REACT_APP_API_KEY}&q=${latitude}%2C${longitude}`, (d) => {
                 setKey(d.Key);
                 setPlaceData(prev => {
                     prev.name = `${d.LocalizedName}, ${d.ParentCity.LocalizedName}, ${d.AdministrativeArea.LocalizedName}, ${d.Country.LocalizedName}`;

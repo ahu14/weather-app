@@ -44,7 +44,7 @@ export let link = [
     },
     {
         name: 'forecast-daily',
-        setlink: (l) => `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${l}?apikey=${process.env.REACT_APP_API_KEY}&metric=true`,
+        setlink: (l) => `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${l}?apikey=${process.env.REACT_APP_API_KEY}&metric=true`,
         func: (d, setWeatherData) => {
             setWeatherData(prev => {
                 if (prev.length > 0 || !Array.isArray(prev)){
