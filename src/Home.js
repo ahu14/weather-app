@@ -33,7 +33,7 @@ let Home = () => {
 
     else{
         return (
-            <div className="flex w-full h-screen flex-col">
+            <div className="flex w-full h-screen flex-col target:bg-amber-500">
                 <ul className="w-full h-fit py-2 flex flex-col 
                 bg-blue-300 text-xl sm:flex-row justify-around text-center">
                     <li id="current-condition" onClick={clicked}
